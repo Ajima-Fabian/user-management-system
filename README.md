@@ -43,6 +43,7 @@ user-management-system/
 🧪 Installation & Setup
 
 git clone https://github.com/Ajima-Fabian/user-management-system.git
+
 cd user-management-system
 chmod +x main.sh
 
