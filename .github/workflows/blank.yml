@@ -1,0 +1,9 @@
+make directory:
+    image: nginx-alpine
+    scipt:
+        - echo "Hello User"
+        - mkdir bin
+        - cd bin
+        - touch data
+        - echo "First line of statement" >> data
+        - cat data
