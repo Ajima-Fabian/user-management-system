@@ -1,35 +1,42 @@
-🛠️ User Management Automation System
+# 🛠️ User Management Automation System
 
-A modular, production-ready Bash automation tool for managing Linux users and groups efficiently. Designed with scalability, logging, and system administration best practices in mind.
-
----
-
-📌 Overview
-
-This project automates repetitive system administration tasks such as user creation, deletion, and group management. It is structured in a modular format to ensure maintainability and extensibility.
+A **modular, production-ready Bash automation tool** for efficiently managing Linux users and groups. Designed for scalability, security, and maintainability, with centralized logging and modern best practices for system administration.
 
 ---
 
-🚀 Features
+## 📌 Overview
 
-- Create and delete system users
-- Group management (create groups, assign users)
-- Bulk user creation from file
-- Centralized logging system
-- Modular and reusable script design
+This project automates common system administration tasks including:
+
+- User creation and deletion  
+- Group management (add/remove users)  
+- Bulk user creation from a file  
+
+The system is **fully modular**, allowing easy extension and maintainability.
 
 ---
 
-🧱 Project Structure
+## 🚀 Features
+
+- ✅ Create and delete Linux system users  
+- ✅ Assign or remove users from groups  
+- ✅ Bulk user creation from `data/users.txt`  
+- ✅ Forces password change on first login  
+- ✅ Centralized logging (`logs/user_manager.log`)  
+- ✅ Modular, reusable script design  
+- ✅ Input validation and error handling for safety  
+
+---
+
+## 🧱 Project Structure
 
 user-management-system/
-├── scripts/              # Core functional scripts
-├── utils/                # Shared utilities (logger)
-├── data/                 # Input files (e.g., users list)
-├── logs/                 # Log files
-├── main.sh               # Entry point
+├── scripts/              # Core functional scripts (create, delete, bulk create, group management)
+├── utils/                # Shared utilities (logger.sh)
+├── data/                 # Input files (e.g., users.txt for bulk creation)
+├── logs/                 # Log files (user_manager.log)
+├── main.sh               # Interactive entry point
 └── README.md
-
 ---
 
 ⚙️ Requirements
@@ -78,7 +85,9 @@ logs/user_manager.log
 🔐 Security Considerations
 
 - Ensure proper sudo permissions
+- Password are set securely and cleared from memory after use
 - Validate user input before execution
+- First-Login password change is enforced for all new users 
 - Avoid running in unrestricted environments
 
 ---
@@ -88,6 +97,7 @@ logs/user_manager.log
 - Role-based access control
 - Password automation
 - Integration with LDAP/Active Directory
+- Enhanced reporting and audit logs
 
 ---
 
