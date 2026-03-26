@@ -1,11 +1,9 @@
 #!/bin/bash
+# Bulk create users from data/users.txt
+# Forces first-login password change for all users
 
-# Bulk create users
-
-# Load logger
 source "$(dirname "$0")/../utils/logger.sh"
 
-# Users file
 FILE="$(dirname "$0")/../data/users.txt"
 
 # Check file exists
@@ -15,40 +13,45 @@ if [ ! -f "$FILE" ]; then
     exit 1
 fi
 
-# Default password input
-read -s -p "Enter default password: " PASSWORD
+# Prompt for default password
+read -s -p "Enter default password for all users: " PASSWORD
 echo
 read -s -p "Confirm password: " CONFIRM
 echo
 
 if [ "$PASSWORD" != "$CONFIRM" ]; then
     echo "Passwords do not match"
-    log "ERROR: Passwords do not match"
+    log "ERROR: Passwords do not match for bulk creation"
     exit 1
 fi
 
-# Loop through users
+# Read users from file
 while IFS= read -r user; do
+    # Skip empty lines and comments
     [ -z "$user" ] && continue
     [[ "$user" =~ ^# ]] && continue
 
+    # Skip if user exists
     if id "$user" &>/dev/null; then
-        echo "User $user exists"
+        echo "User $user already exists"
         log "Skipped existing user $user"
         continue
     fi
 
+    # Create user
     if sudo useradd -m "$user"; then
         echo "$user:$PASSWORD" | sudo chpasswd
-        sudo passwd -e "$user"  # Force first login password change
+        sudo passwd -e "$user"
         echo "User $user created successfully"
-        log "User $user created with forced password change on first login"
+        log "User $user created; first-login password change required"
     else
         echo "Failed to create $user"
-        log "ERROR: Failed to create user $user"
+        log "ERROR: Failed to create $user"
     fi
 done < "$FILE"
 
+# Clear sensitive variables
 unset PASSWORD CONFIRM
-echo "Bulk creation complete"
-log "Bulk creation process completed"
+
+echo "Bulk user creation completed"
+log "Bulk user creation completed"
