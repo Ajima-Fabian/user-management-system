@@ -1,9 +1,13 @@
-make_directory:
-    image: nginx:alpine
-    script:
-        - echo "Hello User"
-        - mkdir bin
-        - cd bin
-        - touch data
-        - echo "First line of statement" >> data
-        - cat data
+name: Simple Pipeline
+on: [push]
+jobs:
+  dir:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+            echo "Make file"
+            mkdir -p folder
+            cd folder
+            touch data
+            echo "This is my first line" >> data
+            cat data
