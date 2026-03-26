@@ -1,7 +1,11 @@
 #!/bin/bash
-# Logging utility
-LOG_FILE="../logs/user_manager.log"
+# logger.sh
+# A reusable logging function
+# Writes timestamped messages to logs/user_manager.log
+
+LOG_FILE="$(dirname "$0")/../logs/user_manager.log"
 
 log() {
-    echo "$(date) - $1" >> "$LOG_FILE"
+    # $1 -> message to log
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
