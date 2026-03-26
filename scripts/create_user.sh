@@ -1,7 +1,7 @@
 #!/bin/bash
 # Create a single user
 
-source "$(dirname "$0")/logger.sh"
+source "$(dirname "$0")/../utils/logger.sh"
 
 USER="$1"
 
