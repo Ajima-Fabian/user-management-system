@@ -1,0 +1,13 @@
+name: Simple Pipeline
+on: [push]
+jobs:
+  dir:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+            echo "Make file"
+            mkdir -p folder
+            cd folder
+            touch data
+            echo "This is my first line" >> data
+            cat data
