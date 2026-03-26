@@ -1,6 +1,6 @@
-make directory:
-    image: nginx-alpine
-    scipt:
+make_directory:
+    image: nginx:alpine
+    script:
         - echo "Hello User"
         - mkdir bin
         - cd bin
