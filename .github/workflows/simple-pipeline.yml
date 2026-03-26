@@ -9,5 +9,6 @@ jobs:
             mkdir -p folder
             cd folder
             touch data
-            echo "This is my first line" >> data
+            echo "Success" > data
+            echo "Time for execution: $(date)" >> data
             cat data
