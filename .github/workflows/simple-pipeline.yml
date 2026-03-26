@@ -1,7 +1,7 @@
 name: Simple Pipeline
 on: [push]
 jobs:
-  dir:
+  simple-file-manipulation:
     runs-on: ubuntu-latest
     steps:
       - run: | 
