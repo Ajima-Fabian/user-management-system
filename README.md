@@ -29,7 +29,7 @@ The system is **fully modular**, allowing easy extension and maintainability.
 ---
 
 ## 🧱 Project Structure
-
+```bash
 user-management-system/
 ├── scripts/ripts
 ├── utils/  
@@ -37,14 +37,7 @@ user-management-system/
 ├── logs/
 ├── main.sh
 └── README.md
-
-user-management-system/
-|--- scripts/
-|--- utils/
-|--- data/
-|--- logs/
-|--- main.sh
-|--- README.md
+```
 
 ---
 
