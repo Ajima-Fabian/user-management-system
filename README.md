@@ -37,6 +37,15 @@ user-management-system/
 ├── logs/
 ├── main.sh
 └── README.md
+
+user-management-system/
+|--- scripts/
+|--- utils/
+|--- data/
+|--- logs/
+|--- main.sh
+|--- README.md
+
 ---
 
 ⚙️ Requirements
