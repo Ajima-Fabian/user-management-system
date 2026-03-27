@@ -56,12 +56,13 @@ git clone https://github.com/Ajima-Fabian/user-management-system.git
 cd user-management-system
 
 chmod +x main.sh
-
+```
 ---
 
 ▶️ Usage
-
+```bash
 ./main.sh
+```
 
 Follow the interactive menu to perform operations.
 
@@ -82,7 +83,6 @@ Then select the bulk creation option from the menu.
 All actions are logged in:
 
 logs/user_manager.log
-```
 ---
 
 🔐 Security Considerations
