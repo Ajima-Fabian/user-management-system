@@ -31,11 +31,11 @@ The system is **fully modular**, allowing easy extension and maintainability.
 ## 🧱 Project Structure
 
 user-management-system/
-├── scripts/              # Core functional scripts (create, delete, bulk create, group management)
-├── utils/                # Shared utilities (logger.sh)
-├── data/                 # Input files (e.g., users.txt for bulk creation)
-├── logs/                 # Log files (user_manager.log)
-├── main.sh               # Interactive entry point
+├── scripts/        # Core functional scripts (create, delete, bulk create, group management)
+├── utils/          # Shared utilities (logger.sh)
+├── data/           # Input files (e.g., users.txt for bulk creation)
+├── logs/           # Log files (user_manager.log)
+├── main.sh         # Interactive entry point
 └── README.md
 ---
 
