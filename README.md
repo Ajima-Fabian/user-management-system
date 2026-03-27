@@ -107,6 +107,7 @@ logs/user_manager.log
 👨‍💻 Author
 
 Ajima Fabian
+
 📧 Email: ajimafabian18@gmail.com
 
 🔗 GitHub: https://github.com/Ajima-Fabian/Ajima-Fabian
