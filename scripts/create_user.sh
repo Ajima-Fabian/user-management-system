@@ -1,6 +1,9 @@
-#!/bin/bash
+we#!/bin/bash
 # Create a single user with default password
 # Forces password change at first login
+# Checks if user already exists 
+# Validates user input
+
 
 # Load logger
 source "$(dirname "$0")/../utils/logger.sh"
