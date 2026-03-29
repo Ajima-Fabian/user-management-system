@@ -41,7 +41,7 @@ user-management-system/
 
 ---
 
-⚙️ Requirements
+## ⚙️ Requirements
 
 - Linux OS (RHEL, CentOS, Ubuntu)
 - Bash shell
@@ -49,7 +49,7 @@ user-management-system/
 
 ---
 
-🧪 Installation & Setup
+## 🧪 Installation & Setup
 ```bash
 git clone https://github.com/Ajima-Fabian/user-management-system.git
 
@@ -59,7 +59,7 @@ chmod +x main.sh
 ```
 ---
 
-▶️ Usage
+## ▶️ Usage
 ```bash
 ./main.sh
 ```
@@ -68,24 +68,27 @@ Follow the interactive menu to perform operations.
 
 ---
 
-📂 Bulk User Creation
+## 📂 Bulk User Creation
 
 Add usernames inside:
-
+```bash
 data/users.txt
+```
 
 Then select the bulk creation option from the menu.
 
 ---
 
-📝 Logging
+## 📝 Logging
 
 All actions are logged in:
-
+```bash
 logs/user_manager.log
+```
+
 ---
 
-🔐 Security Considerations
+## 🔐 Security Considerations
 
 - Ensure proper sudo permissions
 - Password are set securely and cleared from memory after use
@@ -95,7 +98,7 @@ logs/user_manager.log
 
 ---
 
-📈 Future Improvements
+## 📈 Future Improvements
 
 - Role-based access control
 - Password automation
@@ -104,7 +107,7 @@ logs/user_manager.log
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Ajima Fabian
 
@@ -114,6 +117,6 @@ Ajima Fabian
 
 ---
 
-📜 License
+## 📜 License
 
 MIT License
