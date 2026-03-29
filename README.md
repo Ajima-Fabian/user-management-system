@@ -60,10 +60,10 @@ chmod +x main.sh
 ---
 
 ## ▶️ Usage
+Run the command
 ```bash
 ./main.sh
 ```
-
 Follow the interactive menu to perform operations.
 
 ---
