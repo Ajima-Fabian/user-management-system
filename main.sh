@@ -3,6 +3,8 @@
 # Provides interactive menu to create/delete users, manage groups, or bulk create users
 
 # Load logger
+# This command loads the logger file so its function can be used safely without breaking 
+# source loads the script while the $0 shows how the current shell us being executed, the dirname extracts the parent directory of the path to the current shell
 source "$(dirname "$0")/utils/logger.sh"
 
 echo "=================================="
